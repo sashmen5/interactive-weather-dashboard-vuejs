@@ -1,13 +1,27 @@
 <template>
-    
+  <div id="visibility">
+    <p>Visibility: {{ visibility }}</p>
+  </div>
 </template>
 
 <script>
-	export default {
-		name: "Visibility"
-	}
+
+  export default {
+    props: ["highlights"],
+    data () {
+      return {
+        visibility: this.highlights.visibility,
+      }
+    },
+    methods: {
+
+    },
+    computed: {
+
+    },
+  }
 </script>
 
-<style scoped>
+<style>
 
 </style>

@@ -1,13 +1,29 @@
 <template>
-    
+  <div id="windstatus">
+    <p>Wind Status:</p>
+    <p>Speed — {{ speed }}; Direction — {{ direction }}</p>
+  </div>
 </template>
 
 <script>
-	export default {
-		name: "WindStatus"
-	}
+
+  export default {
+    props: ["highlights"],
+    data () {
+      return {
+        speed: this.highlights.windstatus.speed,
+        direction: this.highlights.windstatus.direction
+      }
+    },
+    methods: {
+
+    },
+    computed: {
+
+    },
+  }
 </script>
 
-<style scoped>
+<style>
 
 </style>
