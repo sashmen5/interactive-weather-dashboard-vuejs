@@ -1,5 +1,5 @@
 <template>
-  <div id="visibility">
+  <div>
     <p>Visibility: {{ visibility }}</p>
   </div>
 </template>
@@ -10,7 +10,7 @@
     props: ["highlights"],
     data () {
       return {
-        visibility: this.highlights.visibility,
+        visibility: this.highlights.visibility.toString()
       }
     },
     methods: {
