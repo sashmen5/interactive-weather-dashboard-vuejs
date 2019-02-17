@@ -5,9 +5,10 @@
         type="spline"
         width="100%"
         height="100%"
-        dataformat="json"       dataEmptyMessage="i-https://i.postimg.cc/R0QCk9vV/Rolling-0-9s-99px.gif"
-        dataEmptyMessageImageScale=39
-        :datasource="tempChartData"
+        dataFormat="json"
+        dataEmptyMessage="i-https://i.postimg.cc/R0QCk9vV/Rolling-0-9s-99px.gif"
+        :dataEmptyMessageImageScale="dataEmptyMessageImageScale"
+        :dataSource="tempChartData"
       >
       </fusioncharts>
     </div>
@@ -21,6 +22,7 @@
     components: {},
     data() {
       return {
+        dataEmptyMessageImageScale: 39,
         tempChartData: {
           chart: {
             caption: "Hourly Temperature",
